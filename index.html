@@ -14,23 +14,24 @@
       margin: 0;
     }
 
-    /* Victorian retro round button */
+    /* Victorian retro round button in post-box red */
     #cheekyBtn {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      border: 6px solid #3b2f2f;
-      background: radial-gradient(circle, #d4b48c 0%, #a67c52 70%);
-      box-shadow: 0 8px #3b2f2f, 0 12px 20px rgba(0,0,0,0.3);
-      font-size: 18px;
+      border: 6px solid #7a0000; /* darker red rim */
+      background: radial-gradient(circle, #ff4d4d 0%, #cc0000 70%); /* post box red */
+      box-shadow: 0 8px #7a0000, 0 12px 20px rgba(0,0,0,0.3);
+      font-size: 36px; /* twice the size */
       font-weight: bold;
-      color: #3b2f2f;
+      color: white;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
     }
 
+    /* Pressed effect */
     #cheekyBtn:active {
-      box-shadow: 0 4px #3b2f2f;
+      box-shadow: 0 4px #7a0000;
       transform: translateY(4px);
     }
 
@@ -52,8 +53,3 @@
 
 <body>
   <button id="cheekyBtn">PRESS</button>
-  <p id="output"></p>
-
-  <script src="script.js"></script>
-</body>
-</html>
