@@ -1,18 +1,12 @@
-let comments = [];
-
-fetch("comments.json")
-  .then(response => response.json())
-  .then(data => {
-    comments = data.comments;
-  });
-
-document.getElementById("cheekyBtn").onclick = () => {
-  if (comments.length === 0) {
-    document.getElementById("output").textContent = "No comments loaded yet!";
-    return;
-  }
-
-  const random = comments[Math.floor(Math.random() * comments.length)];
-  document.getElementById("output").textContent = random;
-};
-
+document.getElementById("cheekyBtn").addEventListener("click", function () {
+  fetch("comments.json")
+    .then(response => response.json())
+    .then(data => {
+      const randomComment = data[Math.floor(Math.random() * data.length)];
+      document.getElementById("output").textContent = randomComment;
+    })
+    .catch(error => {
+      document.getElementById("output").textContent = "Error loading comments!";
+      console.error(error);
+    });
+});
