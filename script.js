@@ -5,14 +5,15 @@ document.getElementById("cheekyBtn").addEventListener("click", function () {
       const randomComment = data[Math.floor(Math.random() * data.length)];
 
       const output = document.getElementById("output");
-      output.style.display = "block"; // show box on first click
-      output.textContent = randomComment;
+      output.textContent = randomComment;   // put text in first
+      output.style.display = "block";       // THEN show the box
     })
     .catch(error => {
       const output = document.getElementById("output");
-      output.style.display = "block";
       output.textContent = "Error loading comments!";
+      output.style.display = "block";
       console.error(error);
     });
 });
+
 
