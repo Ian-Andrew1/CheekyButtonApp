@@ -2,11 +2,12 @@ document.getElementById("cheekyBtn").addEventListener("click", function () {
   fetch("comments.json")
     .then(response => response.json())
     .then(data => {
-      const randomComment = data[Math.floor(Math.random() * data.length)];
+      const comments = data.comments; // FIX: use the comments array
+      const randomComment = comments[Math.floor(Math.random() * comments.length)];
 
       const output = document.getElementById("output");
-      output.textContent = randomComment;   // put text in first
-      output.style.display = "block";       // THEN show the box
+      output.textContent = randomComment;
+      output.style.display = "block";
     })
     .catch(error => {
       const output = document.getElementById("output");
