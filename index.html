@@ -8,16 +8,17 @@
 
   <style>
     body {
-      background: #e7e5df; /* aged paper / office wall */
+      background: #e7e5df;
+      margin: 0;
+      height: 100vh;
+
+      /* Centre everything reliably */
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: center; /* centre button vertically */
-      height: 100vh;
-      margin: 0;
     }
 
-    /* 1950s government red warning button */
     #cheekyBtn {
       width: 220px;
       height: 220px;
@@ -32,10 +33,12 @@
       font-size: 32px;
       font-weight: bold;
       color: white;
-      text-align: center;
-      white-space: pre-line; /* keeps Do / Not / Press on separate lines */
 
-      /* PERFECT centring of text */
+      /* Multi-line text */
+      white-space: pre-line;
+      text-align: center;
+
+      /* Perfect centring */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -49,10 +52,9 @@
       transform: translateY(5px);
     }
 
-    /* Output text lower on the screen */
     #output {
       display: none;
-      margin-top: 60px; /* lower but not too far */
+      margin-top: 60px;
       font-family: "Special Elite", monospace;
       font-size: 20px;
       color: #1a1a1a;
@@ -63,7 +65,6 @@
 
 <body>
 
-  <!-- REAL line breaks inside the button text -->
   <button id="cheekyBtn">Do
 Not
 Press</button>
@@ -73,3 +74,4 @@ Press</button>
   <script src="script.js"></script>
 </body>
 </html>
+
