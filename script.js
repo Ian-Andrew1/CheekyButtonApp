@@ -9,11 +9,11 @@ fetch("comments.json")
 document.getElementById("cheekyBtn").onclick = () => {
   if (comments.length === 0) {
     document.getElementById("output").textContent = "No comments loaded yet!";
+    document.getElementById("output").style.display = "block";
     return;
   }
 
   const random = comments[Math.floor(Math.random() * comments.length)];
   document.getElementById("output").textContent = random;
-  document.getElementById("output").style.display = "block"; // ensure it appears
+  document.getElementById("output").style.display = "block";
 };
-
