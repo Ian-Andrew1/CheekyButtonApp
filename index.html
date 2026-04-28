@@ -12,9 +12,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* keep button fixed at top area */
       height: 100vh;
       margin: 0;
+      padding-top: 80px; /* keeps button in place */
     }
 
     /* 1950s government red warning button */
@@ -22,43 +23,22 @@
       width: 220px;
       height: 220px;
       border-radius: 50%;
-      border: 6px solid #5a0000; /* darker red rim */
+      border: 6px solid #5a0000;
       background: radial-gradient(circle, #ff4d4d 0%, #cc0000 70%);
       box-shadow:
         0 10px #5a0000,
         0 16px 25px rgba(0,0,0,0.4);
       font-family: "Special Elite", monospace;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       color: white;
       text-align: center;
-      line-height: 1.2;
-      padding: 10px;
+      line-height: 1.1; /* tighter spacing for 3 lines */
+      padding-top: 40px; /* centres the 3-line text vertically */
       cursor: pointer;
       transition: all 0.1s ease-in-out;
+      white-space: pre-line; /* allows line breaks */
     }
 
     #cheekyBtn:active {
       box-shadow: 0 5px #5a0000;
-      transform: translateY(5px);
-    }
-
-    /* Plain text output below button */
-    #output {
-      display: none;
-      margin-top: 25px;
-      font-family: "Special Elite", monospace;
-      font-size: 20px;
-      color: #1a1a1a;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-  <button id="cheekyBtn">DO NOT PRESS</button>
-  <p id="output"></p>
-
-  <script src="script.js"></script>
-</body>
-</html>
