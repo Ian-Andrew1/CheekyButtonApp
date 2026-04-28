@@ -1,17 +1,10 @@
-[
-  "Oh, you again.",
-  "Please don't press this again.",
-  "Do NOT press this button.",
-  "Careful, this button should not be pressed.",
-  "I was asleep. What do you want?",
-  "Yes? What do you want?",
-  "Why would you press this button?",
-  "Pressing buttons won’t fix your life."
-]
-
-
-
-
-
+{
+  "comments": [
+    "Oh, you again.",
+    "Careful, that button bites.",
+    "I was asleep. What do you want?",
+    "Pressing buttons won’t fix your life, Ian."
+  ]
+}
 
 
