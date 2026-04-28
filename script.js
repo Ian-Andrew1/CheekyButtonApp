@@ -1,20 +1,18 @@
-document.getElementById("cheekyBtn").addEventListener("click", function () {
-  fetch("comments.json")
-    .then(response => response.json())
-    .then(data => {
-      const randomComment = data[Math.floor(Math.random() * data.length)];
+let comments = [];
 
-      const output = document.getElementById("output");
-      output.textContent = randomComment;   // insert text first
-      output.style.display = "block";       // then show the box
-    })
-    .catch(error => {
-      const output = document.getElementById("output");
-      output.textContent = "Error loading comments!";
-      output.style.display = "block";
-      console.error(error);
-    });
-});
+fetch("comments.json")
+  .then(response => response.json())
+  .then(data => {
+    comments = data.comments;
+  });
 
+document.getElementById("cheekyBtn").onclick = () => {
+  if (comments.length === 0) {
+    document.getElementById("output").textContent = "No comments loaded yet!";
+    return;
+  }
 
+  const random = comments[Math.floor(Math.random() * comments.length)];
+  document.getElementById("output").textContent = random;
+};
 
