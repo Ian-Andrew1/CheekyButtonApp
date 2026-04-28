@@ -40,4 +40,27 @@
       transition: all 0.1s ease-in-out;
     }
 
-    #cheekyBtn:active
+    #cheekyBtn:active {
+      box-shadow: 0 6px #5a3b1e;
+      transform: translateY(6px);
+    }
+
+    /* Plain text output below button */
+    #output {
+      display: none;
+      margin-top: 25px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 18px;
+      color: #2b2b2b;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="cheekyBtn">DO NOT PRESS</button>
+  <p id="output"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
