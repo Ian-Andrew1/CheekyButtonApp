@@ -3,7 +3,7 @@ let comments = [];
 fetch("comments.json")
   .then(response => response.json())
   .then(data => {
-    comments = data.comments;
+    comments = data; // FIX: your JSON is a plain array
   });
 
 document.getElementById("cheekyBtn").onclick = () => {
@@ -14,5 +14,6 @@ document.getElementById("cheekyBtn").onclick = () => {
 
   const random = comments[Math.floor(Math.random() * comments.length)];
   document.getElementById("output").textContent = random;
+  document.getElementById("output").style.display = "block"; // ensure it appears
 };
 
