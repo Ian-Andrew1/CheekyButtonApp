@@ -12,10 +12,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center; /* centre button vertically */
       height: 100vh;
       margin: 0;
-      padding-top: 80px; /* keeps button in place */
     }
 
     /* 1950s government red warning button */
@@ -36,7 +35,20 @@
       text-align: center;
       white-space: pre-line; /* keeps Do / Not / Press on separate lines */
 
-      /* PERFECT centring */
+      /* PERFECT centring of text */
       display: flex;
       align-items: center;
-      justify-content: center
+      justify-content: center;
+
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+    }
+
+    #cheekyBtn:active {
+      box-shadow: 0 5px #5a0000;
+      transform: translateY(5px);
+    }
+
+    /* Output text lower on the screen */
+    #output {
+      display
