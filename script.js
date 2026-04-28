@@ -2,12 +2,11 @@ document.getElementById("cheekyBtn").addEventListener("click", function () {
   fetch("comments.json")
     .then(response => response.json())
     .then(data => {
-      const comments = data.comments; // FIX: use the comments array
-      const randomComment = comments[Math.floor(Math.random() * comments.length)];
+      const randomComment = data[Math.floor(Math.random() * data.length)];
 
       const output = document.getElementById("output");
-      output.textContent = randomComment;
-      output.style.display = "block";
+      output.textContent = randomComment;   // insert text first
+      output.style.display = "block";       // then show the box
     })
     .catch(error => {
       const output = document.getElementById("output");
@@ -16,5 +15,6 @@ document.getElementById("cheekyBtn").addEventListener("click", function () {
       console.error(error);
     });
 });
+
 
 
