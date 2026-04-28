@@ -42,3 +42,28 @@
 
     #cheekyBtn:active {
       box-shadow: 0 5px #5a0000;
+      transform: translateY(5px);
+    }
+
+    /* Plain text output below button, lower on screen */
+    #output {
+      display: none;
+      margin-top: 80px; /* moved further down */
+      font-family: "Special Elite", monospace;
+      font-size: 20px;
+      color: #1a1a1a;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="cheekyBtn">Do
+Not
+Press</button>
+
+  <p id="output"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
